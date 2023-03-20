@@ -1,0 +1,73 @@
+body,
+div,
+p,
+h1,
+h2,
+h3,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.page {
+  font-family: 'Poppins', sans-serif;
+  background-color: $color-primaryDark;
+
+  &--with-menu {
+    overflow: hidden;
+  }
+
+  &__section {
+    &--contacts {
+      padding-bottom: 120px;
+      
+      @include onTablet {
+        padding-bottom: 102px;
+      }
+      
+      @include onDesktop {
+        padding-bottom: 164px;
+      }
+    }
+
+    &--details {
+      padding-bottom: 80px;
+      
+      @include onTablet {
+        padding-bottom: 120px;
+      }
+      
+      @include onDesktop {
+        padding-bottom: 180px;
+      }
+    }
+
+    &--compare {
+      padding-bottom: 92px;
+      
+      @include onTablet {
+        padding-bottom: 120px;
+      }
+      
+      @include onDesktop {
+        padding-bottom: 144px;
+      }
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transform: translateX(-100%);
+    transition: transform $transitionTime;
+
+    &:target {
+      transform: translate(0);
+    }
+  }
+}

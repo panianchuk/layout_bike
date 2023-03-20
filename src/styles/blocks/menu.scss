@@ -1,0 +1,84 @@
+.menu {
+  background-color: #e5e5e5;
+
+  &__content {
+    @include top-content;
+
+    padding-bottom: 88px;
+    box-sizing: border-box;
+
+    @include onTablet {
+      padding-bottom: 130px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 203px;
+    }
+  }
+
+  &__top {
+    @include top-action;
+
+    margin-bottom: 44px;
+
+    @include onDesktop {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+  }
+
+  &__image {
+    height: $logo-height-small;
+
+    @include onDesktop {
+      height: $logo-height-large;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__link {
+    @extend %font-menu-link;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+
+    &:hover {
+      border-bottom: 1px solid $color-primaryDark;
+    }
+
+    &--action {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 27px;
+      color: $color-primaryDark;
+      text-decoration: none;
+      border-bottom: 1px solid $color-primaryDark;
+      width: max-content;
+    }
+  }
+
+  &__call {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    color: $color-primaryDark;
+    text-decoration: none;
+
+    margin-bottom: 16px;
+  }
+}

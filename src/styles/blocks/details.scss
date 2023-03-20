@@ -1,0 +1,35 @@
+.details {
+
+  &__detail {
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @extend %font-section-title;
+    margin-bottom: 48px;
+    text-align: center;
+
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include onTablet {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__name {
+    @extend %font-bold;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    @extend %font-regular;
+  }
+}

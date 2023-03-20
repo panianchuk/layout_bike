@@ -1,0 +1,60 @@
+.icon {
+  position: relative;
+  display: block;
+  width: $icon-width-small;
+  height: $icon-width-small;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__tooltip {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: max-content;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-8px, -50%);
+    transition: all $transitionTime;
+  }
+
+  &:hover &__tooltip {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @include onTablet {
+    width: $icon-width-large;
+    height: $icon-width-small;
+  }
+  
+  &--phone {
+    background-image: url(../images/phone.svg);
+    margin-right: $mr-icon-small;
+    
+    @include onTablet {
+      margin-right: $mr-icon-large;
+    }
+  }
+
+  &--menu {
+    background-image: url(../images/burger.svg);
+    transition: all 0.2s;
+
+    &:hover {
+      background-image: url(../images/burger-hover.svg);
+    }
+  }
+
+  &--cross {
+    background-image: url(../images/cross.svg);
+  }
+}
